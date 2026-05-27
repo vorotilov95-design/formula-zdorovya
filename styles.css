@@ -1,0 +1,1002 @@
+:root {
+  --bg: #f3f6f3;
+  --card: #ffffff;
+  --green: #5e7446;
+  --green-dark: #3f5630;
+  --green-soft: #eaf0e6;
+  --sage: #dfe8d8;
+  --text: #1a1a1a;
+  --muted: #6f7e6c;
+  --border: #dde7da;
+  --shadow: rgba(70, 88, 62, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  padding-bottom: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter",
+    "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  position: sticky;
+  top: 10px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: min(1180px, calc(100% - 24px));
+  margin: 10px auto 0;
+  padding: 10px 10px 10px 14px;
+  border: 1px solid rgba(221, 231, 218, 0.88);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 36px rgba(70, 88, 62, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  color: var(--green-dark);
+  font-size: 15px;
+  font-weight: 850;
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.site-header nav {
+  display: none;
+}
+
+.header-btn,
+.primary-btn,
+.secondary-btn,
+.price-btn,
+.mobile-sticky-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.header-btn {
+  flex: 0 0 auto;
+  min-width: 72px;
+  min-height: 38px;
+  padding: 10px 13px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #ffffff;
+  font-size: 0;
+  font-weight: 850;
+  line-height: 1.05;
+}
+
+.header-btn::after {
+  content: "Бронь";
+  font-size: 14px;
+}
+
+.hero-section,
+.belief-section,
+.problem-section,
+.method-section,
+.program-section,
+.weeks-section,
+.support-section,
+.proof-section,
+.booking-section {
+  width: min(1180px, calc(100% - 24px));
+  margin: 0 auto;
+}
+
+.hero-section {
+  display: grid;
+  gap: 24px;
+  padding: 30px 0 38px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 8px 13px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1.1;
+}
+
+.hero-copy h1,
+.section-head h2,
+.pricing-head h2,
+.booking-card h2,
+.belief-card h2,
+.method-copy h2 {
+  margin: 16px 0 14px;
+  color: var(--text);
+  font-size: 42px;
+  font-weight: 920;
+  letter-spacing: 0;
+  line-height: 0.98;
+}
+
+.hero-copy p,
+.belief-card p,
+.section-head p,
+.pricing-head p,
+.booking-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.hero-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.primary-btn,
+.secondary-btn {
+  min-height: 58px;
+  padding: 16px 20px;
+  border-radius: 21px;
+  font-size: 19px;
+  font-weight: 880;
+  line-height: 1.1;
+}
+
+.primary-btn {
+  background: var(--green);
+  color: #ffffff;
+}
+
+.secondary-btn {
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.hero-proof span {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 780;
+}
+
+.hero-media,
+.image-panel {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  background: var(--card);
+  box-shadow: 0 18px 48px rgba(70, 88, 62, 0.11);
+}
+
+.hero-media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+}
+
+.hero-media img,
+.image-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-card {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  left: 14px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(18px);
+}
+
+.hero-card b {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--green-dark);
+  font-size: 26px;
+  line-height: 1;
+}
+
+.hero-card span {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.28;
+}
+
+.belief-section,
+.problem-section,
+.method-section,
+.program-section,
+.weeks-section,
+.support-section,
+.proof-section,
+.pricing-section,
+.booking-section {
+  padding: 48px 0;
+}
+
+.belief-section {
+  display: grid;
+  gap: 14px;
+}
+
+.belief-card,
+.problem-strip article,
+.method-list article,
+.program-grid article,
+.support-card,
+.proof-grid article,
+.price-card,
+.pricing-footer,
+.booking-card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 14px 36px var(--shadow);
+}
+
+.belief-card {
+  padding: 24px;
+  border-radius: 30px;
+}
+
+.belief-card h2,
+.method-copy h2,
+.section-head h2,
+.pricing-head h2,
+.booking-card h2 {
+  font-size: 34px;
+  line-height: 1.04;
+}
+
+.mini-grid,
+.problem-strip,
+.program-grid,
+.support-grid,
+.proof-grid,
+.pricing-grid,
+.method-list {
+  display: grid;
+  gap: 12px;
+}
+
+.mini-grid {
+  grid-template-columns: 1fr;
+}
+
+.mini-grid article {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  background: var(--green-soft);
+}
+
+.mini-grid strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #ffffff;
+  font-size: 15px;
+}
+
+h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+.mini-grid p,
+.problem-strip p,
+.method-list p,
+.program-grid p,
+.support-card p,
+.proof-grid span,
+.price-note,
+.price-card li,
+.pricing-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16.5px;
+  line-height: 1.36;
+}
+
+.section-head {
+  max-width: 760px;
+  margin-bottom: 22px;
+}
+
+.section-head.center {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.problem-strip article,
+.program-grid article,
+.support-card,
+.proof-grid article {
+  padding: 21px;
+  border-radius: 26px;
+}
+
+.method-section {
+  display: grid;
+  gap: 24px;
+}
+
+.image-panel {
+  aspect-ratio: 4 / 5;
+}
+
+.method-list article {
+  padding: 20px;
+  border-radius: 24px;
+}
+
+.weeks-list {
+  display: grid;
+  gap: 10px;
+}
+
+.weeks-list details {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: 0 12px 30px rgba(70, 88, 62, 0.06);
+}
+
+.weeks-list summary {
+  display: grid;
+  grid-template-columns: 34px 1fr 28px;
+  align-items: center;
+  gap: 11px;
+  min-height: 68px;
+  padding: 16px 16px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.14;
+  list-style: none;
+}
+
+.weeks-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.weeks-list summary span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.weeks-list summary i {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--green-soft);
+}
+
+.weeks-list summary i::before,
+.weeks-list summary i::after {
+  position: absolute;
+  top: 13px;
+  left: 8px;
+  width: 12px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--green);
+  content: "";
+  transition: transform 0.18s ease;
+}
+
+.weeks-list summary i::after {
+  transform: rotate(90deg);
+}
+
+.weeks-list details[open] summary i::after {
+  transform: rotate(0deg);
+}
+
+.weeks-list p {
+  margin: 0;
+  padding: 0 18px 18px 61px;
+  color: var(--muted);
+  font-size: 16.5px;
+  line-height: 1.38;
+}
+
+.support-card.main-person {
+  display: grid;
+  gap: 16px;
+}
+
+.support-card.main-person img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 22px;
+  object-fit: cover;
+}
+
+.proof-section {
+  width: min(1180px, calc(100% - 24px));
+  margin: 0 auto;
+}
+
+.proof-grid article {
+  display: grid;
+  gap: 5px;
+  background: var(--green-soft);
+}
+
+.proof-grid b {
+  color: var(--green-dark);
+  font-size: 22px;
+}
+
+.pricing-section {
+  background: var(--bg);
+}
+
+.pricing-container {
+  width: min(1180px, calc(100% - 24px));
+  margin: 0 auto;
+}
+
+.pricing-head {
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+.pricing-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 15px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--green-soft);
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 24px 22px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.main-card {
+  border: 2px solid var(--green);
+  box-shadow: 0 18px 42px rgba(70, 88, 62, 0.12);
+}
+
+.card-label {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 32px;
+  padding: 8px 14px;
+  margin-bottom: 22px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.1;
+}
+
+.card-label.soft {
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.card-top h3 {
+  min-height: 0;
+  margin: 0 0 16px;
+  font-size: 28px;
+}
+
+.price-box {
+  min-height: 0;
+  margin-bottom: 18px;
+}
+
+.new-price {
+  color: var(--green);
+  font-size: 48px;
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 0.95;
+}
+
+.new-price.small {
+  font-size: 38px;
+  line-height: 1;
+}
+
+.total-price {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 16.5px;
+  font-weight: 760;
+  line-height: 1.25;
+}
+
+.price-note {
+  margin-bottom: 20px;
+}
+
+.price-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.price-card li {
+  position: relative;
+  padding-left: 27px;
+}
+
+.price-card li::before {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: inset 0 0 0 3px #7ea35d;
+  content: "";
+}
+
+.price-btn {
+  min-height: 60px;
+  padding: 14px 18px;
+  margin-top: auto;
+  border-radius: 21px;
+  background: var(--green);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 880;
+  line-height: 1.1;
+}
+
+.price-btn.secondary {
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.booking-section {
+  padding-bottom: 96px;
+}
+
+.booking-card {
+  display: grid;
+  gap: 22px;
+  padding: 24px 20px;
+  border-radius: 30px;
+}
+
+.booking-card h2 {
+  margin-top: 16px;
+}
+
+.booking-card form {
+  display: grid;
+  gap: 12px;
+}
+
+.booking-card label {
+  display: grid;
+  gap: 8px;
+  color: var(--green-dark);
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.booking-card input {
+  width: 100%;
+  min-height: 58px;
+  padding: 15px 18px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 18px;
+}
+
+.booking-card button {
+  min-height: 62px;
+  border: 0;
+  border-radius: 22px;
+  background: var(--green);
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.header-btn:focus-visible,
+.primary-btn:focus-visible,
+.secondary-btn:focus-visible,
+.price-btn:focus-visible,
+.mobile-sticky-cta:focus-visible,
+.booking-card button:focus-visible,
+.booking-card input:focus-visible {
+  outline: 3px solid rgba(94, 116, 70, 0.32);
+  outline-offset: 3px;
+}
+
+.mobile-sticky-cta {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  z-index: 30;
+  min-height: 58px;
+  padding: 14px 18px;
+  border-radius: 22px;
+  background: var(--green);
+  color: #ffffff;
+  box-shadow: 0 16px 42px rgba(63, 86, 48, 0.28);
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+@media (min-width: 720px) {
+  body {
+    padding-bottom: 0;
+  }
+
+  .mobile-sticky-cta {
+    display: none;
+  }
+
+  .site-header {
+    display: grid;
+    top: 14px;
+    grid-template-columns: 1fr auto 1fr;
+    width: min(1180px, calc(100% - 32px));
+    margin-top: 14px;
+    padding: 12px 14px 12px 18px;
+    border-radius: 26px;
+  }
+
+  .site-header nav {
+    display: flex;
+    gap: 8px;
+  }
+
+  .site-header nav a {
+    min-height: 38px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 15px;
+    font-weight: 760;
+    text-decoration: none;
+  }
+
+  .header-btn {
+    justify-self: end;
+    font-size: 15px;
+  }
+
+  .header-btn::after {
+    content: none;
+  }
+
+  .hero-section,
+  .belief-section,
+  .problem-section,
+  .method-section,
+  .program-section,
+  .weeks-section,
+  .support-section,
+  .proof-section,
+  .booking-section,
+  .pricing-container {
+    width: min(1180px, calc(100% - 32px));
+  }
+
+  .hero-section {
+    grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.78fr);
+    gap: 36px;
+    align-items: center;
+    padding: 36px 0 42px;
+  }
+
+  .hero-copy h1 {
+    max-width: 720px;
+    font-size: clamp(54px, 5.8vw, 78px);
+  }
+
+  .hero-copy p {
+    max-width: 690px;
+    font-size: clamp(22px, 2.4vw, 30px);
+  }
+
+  .hero-actions {
+    display: flex;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    min-height: 60px;
+    padding: 17px 24px;
+  }
+
+  .hero-media {
+    height: 520px;
+    aspect-ratio: auto;
+  }
+
+  .hero-card {
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    padding: 20px 22px;
+    border-radius: 26px;
+  }
+
+  .hero-card b {
+    font-size: 34px;
+  }
+
+  .hero-card span {
+    font-size: 18px;
+  }
+
+  .belief-section,
+  .problem-section,
+  .method-section,
+  .program-section,
+  .weeks-section,
+  .support-section,
+  .proof-section,
+  .pricing-section,
+  .booking-section {
+    padding: 72px 0;
+  }
+
+  .belief-section {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+    align-items: stretch;
+  }
+
+  .belief-card {
+    padding: 34px;
+    border-radius: 34px;
+  }
+
+  .belief-card h2,
+  .method-copy h2,
+  .section-head h2,
+  .pricing-head h2,
+  .booking-card h2 {
+    font-size: clamp(38px, 4.5vw, 60px);
+  }
+
+  .belief-card p,
+  .section-head p,
+  .pricing-head p,
+  .booking-card p {
+    font-size: 21px;
+  }
+
+  .mini-grid {
+    gap: 14px;
+  }
+
+  .problem-strip,
+  .program-grid,
+  .proof-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .program-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .method-section {
+    grid-template-columns: minmax(320px, 0.76fr) minmax(0, 1fr);
+    gap: 36px;
+    align-items: center;
+  }
+
+  .image-panel {
+    height: 640px;
+    aspect-ratio: auto;
+  }
+
+  .method-list {
+    gap: 14px;
+  }
+
+  .method-list article {
+    padding: 22px;
+  }
+
+  .weeks-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .weeks-list summary {
+    min-height: 72px;
+    padding: 18px 20px;
+    font-size: 20px;
+  }
+
+  .weeks-list p {
+    padding: 0 20px 20px 66px;
+    font-size: 18px;
+  }
+
+  .support-grid {
+    grid-template-columns: 1.25fr 0.85fr 0.85fr;
+    gap: 16px;
+  }
+
+  .support-card {
+    padding: 24px;
+  }
+
+  .support-card.main-person {
+    grid-template-columns: 128px 1fr;
+    align-items: center;
+  }
+
+  .support-card.main-person img {
+    width: 128px;
+    aspect-ratio: 1;
+    border-radius: 24px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .price-card {
+    padding: 30px 28px 28px;
+    border-radius: 32px;
+  }
+
+  .card-top h3 {
+    min-height: 60px;
+    font-size: 30px;
+  }
+
+  .new-price {
+    font-size: clamp(50px, 5vw, 62px);
+  }
+
+  .new-price.small {
+    font-size: clamp(36px, 3.8vw, 46px);
+  }
+
+  .booking-card {
+    grid-template-columns: minmax(0, 1fr) minmax(330px, 0.74fr);
+    gap: 28px;
+    align-items: center;
+    padding: 34px;
+  }
+}
+
+@media (max-width: 719px) {
+  body {
+    padding-bottom: 78px;
+  }
+
+  .hero-copy p {
+    font-size: 18px;
+  }
+
+  .proof-section {
+    width: min(100% - 24px, 1180px);
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-copy h1 {
+    font-size: 38px;
+  }
+
+  .hero-copy p {
+    font-size: 18px;
+  }
+
+  .belief-card h2,
+  .method-copy h2,
+  .section-head h2,
+  .pricing-head h2,
+  .booking-card h2 {
+    font-size: 31px;
+  }
+
+  .new-price {
+    font-size: 43px;
+  }
+}
