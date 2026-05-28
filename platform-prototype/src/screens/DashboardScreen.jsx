@@ -8,16 +8,16 @@ import { StatusBadge } from "../components/StatusBadge";
 
 const quickActions = [
   { label: "Загрузить файл", icon: "upload_file", route: routes.upload },
-  { label: "Открыть дневник", icon: "menu_book" },
-  { label: "Внести замеры", icon: "straighten" },
+  { label: "Открыть дневник", icon: "menu_book", route: routes.foodDiary },
+  { label: "Внести замеры", icon: "straighten", route: routes.measurements },
   { label: "Написать куратору", icon: "chat_bubble", curator: true },
 ];
 
 const fabActions = [
   { label: "Загрузить анализы", icon: "upload_file", route: routes.upload },
   { label: "Добавить фото тарелки", icon: "add_a_photo", route: routes.upload },
-  { label: "Заполнить дневник", icon: "menu_book" },
-  { label: "Внести замеры", icon: "straighten" },
+  { label: "Заполнить дневник", icon: "menu_book", route: routes.foodDiary },
+  { label: "Внести замеры", icon: "straighten", route: routes.measurements },
 ];
 
 export function DashboardScreen({ onNavigate, onCurator }) {

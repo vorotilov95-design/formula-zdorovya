@@ -72,7 +72,12 @@ export function WeekScreen({ onNavigate, onCurator }) {
             </div>
 
             <MaterialCard button="Открыть PDF" icon="description" title="Welcome-гайд" />
-            <MaterialCard button="Инструкция" icon="menu_book" title="Дневник питания" />
+            <MaterialCard
+              button="Инструкция"
+              icon="menu_book"
+              onClick={() => onNavigate(routes.foodDiary)}
+              title="Дневник питания"
+            />
           </div>
         </section>
 
@@ -80,14 +85,23 @@ export function WeekScreen({ onNavigate, onCurator }) {
           <h2 className="font-headline-md text-headline-md text-graphite">Задания недели</h2>
           <div className="space-y-3">
             <TaskCard done label="Заполнить анкету" status="Выполнено" />
-            <TaskCard inProgress label="Заполнить дневник питания 3 дня" status="В процессе" />
+            <TaskCard
+              inProgress
+              label="Заполнить дневник питания 3 дня"
+              onClick={() => onNavigate(routes.foodDiary)}
+              status="В процессе"
+            />
             <TaskCard
               alert
               label="Загрузить анализы"
               onClick={() => onNavigate(routes.assignment)}
               status="Не загружено"
             />
-            <TaskCard label="Внести стартовые замеры" status="Не начато" />
+            <TaskCard
+              label="Внести стартовые замеры"
+              onClick={() => onNavigate(routes.measurements)}
+              status="Не начато"
+            />
           </div>
         </section>
 
@@ -112,14 +126,18 @@ export function WeekScreen({ onNavigate, onCurator }) {
   );
 }
 
-function MaterialCard({ icon, title, button }) {
+function MaterialCard({ icon, title, button, onClick }) {
   return (
     <div className="min-w-[200px] bg-white-card border border-border-light rounded-xl p-4 flex flex-col">
       <div className="w-10 h-10 bg-tertiary-fixed-dim/30 text-tertiary rounded-lg flex items-center justify-center mb-3">
         <Icon name={icon} />
       </div>
       <h3 className="font-label-md text-label-md text-graphite mb-4">{title}</h3>
-      <button className="mt-auto w-full py-2 border border-border-light text-primary font-label-md text-label-md rounded-lg transition-transform active:scale-95" type="button">
+      <button
+        className="mt-auto w-full py-2 border border-border-light text-primary font-label-md text-label-md rounded-lg transition-transform active:scale-95"
+        onClick={onClick}
+        type="button"
+      >
         {button}
       </button>
     </div>

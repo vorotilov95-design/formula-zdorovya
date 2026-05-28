@@ -28,6 +28,7 @@ const items = [
     title: "Начать дневник питания",
     text: "Фиксация рациона в течение 3 дней",
     button: "Открыть дневник",
+    route: routes.foodDiary,
   },
   {
     status: "Не начато",
@@ -35,6 +36,7 @@ const items = [
     text: "Вес, объемы и фото (по желанию)",
     button: "Внести данные",
     icon: "straighten",
+    route: routes.measurements,
   },
   {
     status: "Не начато",
@@ -42,6 +44,7 @@ const items = [
     text: "Основы работы по программе «Формула здоровья»",
     button: "Смотреть (12 мин)",
     icon: "play_circle",
+    route: routes.lesson,
   },
 ];
 

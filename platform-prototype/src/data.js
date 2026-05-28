@@ -4,12 +4,16 @@ export const routes = {
   diagnostics: "diagnostics",
   upload: "upload",
   dashboard: "dashboard",
+  files: "files",
   course: "course",
   week: "week",
   lesson: "lesson",
   assignment: "assignment",
+  measurements: "measurements",
+  foodDiary: "foodDiary",
   program: "program",
   profile: "profile",
+  curator: "curator",
 };
 
 export const images = {
@@ -39,12 +43,34 @@ export const images = {
     "https://lh3.googleusercontent.com/aida-public/AB6AXuDccoN8XzVFQbFwnfP6oGW3c8Rc8GTcljAOzMCuZNS3b88LnhrJ3V2B6BI7LJqBj4JzpkGCKeJ4pMUgqGMd-E9qcjxbuwkWtvuunkgY0ZxP3BYvliywl0-XvQjhbfgByCzyxyKi0ujodcxHi8Q77Q_ScyZkap444yaTOnFKRYWBYhUU3t5Ifva6NFgheHoEvvlip8u0EFrOD3qRu_A1M9kWH6vmJzXkKIgkWODP5lxGvFCy_xVU-YVsXAQCUAzC1kh6XSM8y5A8gX3e",
   weekVideo:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuCJ9vnJeWVijlgyo5c6Xkh48zw6k3bQ95e5XD2HBEfCSpqgMTMjW7YL7iFDSyFUDtO6iLgyLjlNEwTxdgmA6R0bGCcJ1katpJrxTxM48UhfA3xBs_4WrrMJPfTUjw2DfgQsahCmVw2Y_Krh7tQjBEFOQNS4lPehA4VznNMcnZEiRX5cNZmmLg7wUXuYr3yc-xepg8CAtfr8AQNtfMY1K_Udz0yH5J4xfq3uYy_4THDVSJ2aUZ4lifNOTGyGuNxdonhKO_B4CAjSPQu2",
+  avatarFiles:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDQZCzKn2qJjCovClbbQ3LQfy928Z7CZrmA-uZooiqHVOX-2wOOr3lX_lMm77aJd-2N8nCxAT7EivdXJQlc3ySO9fS63_Cf1GoVjlLBb_hZN2iDE6E5Ne-Gp04M41vM8Yl4-whh4WcuCsNEv_BgZqScFQdpWfA33zj202hX4lWHKMZTfPeoryh83IluF_yawabtJ8dpDxCt7K227yd0O6Vv3unvTivxgyhzhWUZEStSmTS7i5bhCVvuOZjsnhdSBdRPYmRm9oTJYZZ8",
+  foodPlate:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCco2bLDxPphAiyThkcdt5mwZhX7AMA7RH3Vp-MAgw9Iwxd1dR2btKXLyr2yR4lksDtlzM9SlJM4ZwxuXD-TJXBk22bbCMjP0DVtstTEHW4nbelWJUByhfrFfU0l3QelM_gqo-ju04U8bDOFW7Ym4QknzPEfeQrt36RJjdICFGbF8V3CyDLhLK91mtJN4s2zipfaxeLP1WMkrULct8NdnDCg5FbTG5A5qGdoO1KfvEIYQBKjefNZ0z02ozqkcrQpom-tmzEzdsZUtux",
+  avatarProfile:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDd9KUzWxRVNpjnwx5_AR6JxHxgthTojO6T6ZeCvNOypj00SsZs_FdEzjMo3q0DDEGw8CBfQtT8M2nDWU53_KmyebWQaE-KcsHz2ebhK5pA1v2h15L2vlGUMMZPqlHoAx83CUlm1vPbSzDh4LC_LEXrfSXWozSRt68sxc51_AKIMthrnkklp5Mpnlm-oBR-yS77x4JEDUKHrGNLPW5EjLyMd-VMC2VtaGtx6uUJAE1f8N-uA7rAzx4ZINQnvSGqlNNEmbRtJV8IBgQs",
+  profilePhoto:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCqH-F44NDAGviYKeIY9Jz_Uf9zGHRsta4qGk7UDXQ-xqSfOCCUHf4yriQNG5tqGCz9SHLIkpfLf_27eYz8vHfWD6ZUPqFQHbHrJl7sWGQOlhzOcnZcByZtj7wGNC_nSO7yZT2txW_B_An6DN8iiNAq-LzdeU-Fmr3t8tRkkL_PDSitBFd15fem5qI3tbPaD1mY6og6LNjKr9GpWbGsaFShGv50uAUDsFz5v7tlusOwo8Uk_5rHwiy2umL9rjMONBaDHK7_sAd9hcDu",
+  avatarCurator:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDul3sXdsF3ak0J4xRWjX6YIFO9Jdd8iLaoVztAG-s-obAU1C1k3c8WFE7Z1PV0t111RDoJCmC0rcY-_HqR_qnDYDFbnQVzmDtFrA0pFPpoD-gceV_3ritvB27yuKfPwa_399T_lPhNA2r6tH31foH6ljkUo2BYSY7cxc2dRV5dEyy-5KeZ0WaqMmdYQodhKDAV5RcE00tdVsHOL59lvIgHlPzlF-u7GUlcx0jrkGb6C_PLVcwHQhPXzaQJ8PxdYIMms4Cb9K8B1MfR",
+  curatorMaria:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDtntRFeyT4JIuKFcL8bstHy1HHd0I9aDNhDlAJG_2tTloqPrQnRIzd3kRFegci5_56z7trxhf2WyqSRk4HkcRJGswQpnlE7yPvleikMzmsYYvGIER4LVnP51ImhHwhbJIK5JyDKjJTrkRu-HQRVPUrYQNTP_g9TWTVmOPzAnm_i9b9XiaDBV9W0on_593U6_ichpx-S1EFqQphf2jAwwHGltC8iv4shvZXOqyazpzCMrdAy4sxyIRiXsiD_3wuz1kFw66ZOfglbVH3",
+  curatorElena:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuAg8FsFKtLS3ZQbmEoaaVlugQnI8NK8W35ADSXYUwLxXVEyQZLQvDIx_UGXZLf6ExJUFKRguvWKxM90jCJr-Js_IdCxyZszz2gCivRxWZAsuDkwCbRQ_vKAsJ_X5GpDT2svtwrU05gs0IDz9O4UFDYR272Gf5DnQNXO67dKF7wSRTNMyzpJHyM7ATSrJnZqKzV1U37VJOwWwdM97NseFffyB18JJ62nqgdOSV4KIdJeUAbYsoHc5ftOXihnzIewovOryGBPtPZDqc1a",
+  curatorAnna:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBuVj5jwqnMszUHd0YQYPktXTilNU3lBRPFJLE9x-Jxuey92BtX7ARngxfeLjODMX33kVTWRpDvKYMyhI7IZYvGvV-lFgk4Bxej0PEUH0_uv8FGirwhWxf70WkxkqPiRRkdrfkRFRkTQ9GpIfB362xeYXs4U3zMUBx0E325Xw2gvGWlvM2ouBEwwPGA5VWefcrh5c8sWZykeVXPGb1FPR9IBDn_zi0Nq1ByipYnobSkDIw0mt9GZYPPQVkHts42WVWTqKrp-5ONHl8E",
+  avatarMeasurements:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDtnTuBR7Ws1rp6TrguH2CrDRpK0ZLrooMkMvZmjPB3qbz55lIQDhRS-Ls2kPjnypPtuIE8e5xiJDf7qGLvP2r11Gw0bqOramjbebOGKpHB6Y8pWee2o2la0a9v1zXCz6xK9dziG8BZr40_pYYcrsbxVtiB_sx6Ey4tp-_1DDW-Q9tuu4AzxLAO04a9HbTjrL5OgIx-s1ev1IXMbGEFPNJkDuJKoQoRZIcCTVhJWZskKExZBCJGPmK9omgtDFIWWRP3eU24Z1vq4v35",
+  avatarDiary:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDyrD-UxXBZCDdcQFsM6duf7334KcflCa28pAaKwT3lGMOAtEXLVhcuJrlTKtNKKziZ3W0C3qlmBaAAouZSDRCz0PmIySxX41pMbfLIgIcLqkn7aQNXEwtXHP-tLLQWxinpTb3cVE1v5IZRF1UJciEloN31NixQupYluYKn1V44rXJSb1B-3r62Nob2mU7vLMNJU0zXwOSbp63zHKG_2NySbiU0XkxSXyP8EJetF7pkG5HJXurhxJZJo_MZt4Hn950AnqWWU6_fiUd8",
+  breakfast:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCZuBvLxNWNSITaabAIEU5gLkPusHUUo4NOIfz9PBLljBw8pd9oFzI9P4ll-lbgsxOtD3ZDtrlCTm1ZZAeqDHDR1meGowLw-Vs4yGXWpUVD3MBsh4l0t-K3yBWDvaRg76dCfbSnCx1l6FXGQMt-PDUhezJ6Psua-Lr9FA6yY146D0sk_7XSjwPc6KjVrDJ0GDRzoazUCImEYIRgS3MGIqanuEVihw_pnANv9jiBj766mbOHdqafBmissibILsJ88wGU4lspOBSJg9lv",
 };
 
 export const navItems = [
   { id: routes.dashboard, label: "Главная", icon: "home" },
   { id: routes.course, label: "Курс", icon: "school" },
-  { id: routes.upload, label: "Файлы", icon: "folder_open" },
+  { id: routes.files, label: "Файлы", icon: "folder_open" },
   { id: routes.program, label: "Программа", icon: "calendar_today" },
   { id: routes.profile, label: "Профиль", icon: "person" },
 ];

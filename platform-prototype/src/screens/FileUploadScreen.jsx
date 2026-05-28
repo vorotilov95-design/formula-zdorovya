@@ -20,7 +20,7 @@ export function FileUploadScreen({ onNavigate }) {
 
   if (success) {
     return (
-      <PageShell active={routes.upload} avatar={images.avatarUpload} onNavigate={onNavigate}>
+      <PageShell active={routes.files} avatar={images.avatarUpload} onNavigate={onNavigate}>
         <section className="space-y-8 py-10 flex flex-col items-center text-center">
           <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-2">
             <Icon className="text-5xl" name="check_circle" />
@@ -52,7 +52,7 @@ export function FileUploadScreen({ onNavigate }) {
   }
 
   return (
-    <PageShell active={routes.upload} avatar={images.avatarUpload} onNavigate={onNavigate}>
+    <PageShell active={routes.files} avatar={images.avatarUpload} onNavigate={onNavigate}>
       <div className="space-y-section-gap">
         <section className="space-y-2">
           <h2 className="font-headline-xl text-headline-xl text-graphite">Загрузка файлов</h2>

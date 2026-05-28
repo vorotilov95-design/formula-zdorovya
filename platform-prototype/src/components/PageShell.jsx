@@ -7,12 +7,13 @@ export function PageShell({
   avatar,
   bottomNav = true,
   fixedHeader = false,
+  headerTitle,
   onNavigate,
   className = "",
 }) {
   return (
     <div className="min-h-screen bg-background text-on-background font-body-md">
-      <Header avatar={avatar} fixed={fixedHeader} />
+      <Header avatar={avatar} fixed={fixedHeader} title={headerTitle} />
       <main
         className={`flex-grow w-full max-w-screen-xl mx-auto px-container-padding-mobile ${
           fixedHeader ? "pt-20" : "pt-8"
