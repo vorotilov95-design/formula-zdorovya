@@ -824,7 +824,7 @@
             <button class="w-full bg-white text-primary h-[60px] rounded-2xl font-[880] text-lg active-scale text-center" type="submit">
               Отправить заявку
             </button>
-            <p class="hidden rounded-2xl bg-white/10 px-4 py-3 text-center text-sm leading-relaxed text-white" id="lead-form-message"></p>
+            <div class="hidden rounded-2xl bg-white/10 px-4 py-3 text-center text-sm leading-relaxed text-white" id="lead-form-message"></div>
           </form>
           <p class="mt-6 text-[10px] opacity-60">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
         </div>
@@ -859,6 +859,7 @@
       });
 
       var leadFormEndpoint = "";
+      var leadTelegramFallbackUrl = "https://t.me/formylaHealth_bot";
 
       function showLeadError(input, message) {
         var error = document.querySelector('[data-error-for="' + input.id + '"]');
@@ -908,12 +909,16 @@
         return "@" + username;
       }
 
-      function setLeadMessage(message, isError) {
+      function setLeadMessage(message, isError, allowHtml) {
         var messageNode = document.querySelector("#lead-form-message");
         if (!messageNode) {
           return;
         }
-        messageNode.textContent = message;
+        if (allowHtml) {
+          messageNode.innerHTML = message;
+        } else {
+          messageNode.textContent = message;
+        }
         messageNode.classList.remove("hidden", "bg-white/10", "bg-white/20");
         messageNode.classList.add(isError ? "bg-white/20" : "bg-white/10");
       }
@@ -972,7 +977,11 @@
           };
 
           if (!leadFormEndpoint) {
-            setLeadMessage("Форма заполнена верно, но отправка в Telegram ещё не подключена. Сейчас нужно написать в Telegram или дождаться подключения сервера заявок.", true);
+            setLeadMessage(
+              'Не получилось отправить заявку автоматически. Напишите нам в Telegram: <a class="font-bold underline underline-offset-4" href="' + leadTelegramFallbackUrl + '" target="_blank" rel="noopener">@formylaHealth_bot</a>.',
+              true,
+              true
+            );
             return;
           }
 
